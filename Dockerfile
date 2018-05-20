@@ -2,5 +2,5 @@ FROM nginx
 
 MAINTAINER Anton Zarenko "zarenkovanton@yandex.ru"
 
-COPY conf/nginx.conf /etc/nginx/nginx.conf
-COPY html/ /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY index.html /var/www/html
