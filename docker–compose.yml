@@ -5,3 +5,4 @@ web:
     - "443:443"
   volumes:
     - ./var/www/html/:/var/www/html/
+restart: always
