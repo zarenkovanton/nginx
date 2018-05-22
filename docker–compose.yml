@@ -1,11 +1,11 @@
-version: '1'
-options:
-    - no-cache
+version: '3'
 services:
-  web:
-    volumes:
-      - "./var/www/html:/var/www/html"
-    ports:
+    nginx:
+     build: ./
+     ports:
       - "80:80"
       - "443:443"
-    restart: always
+     volumes:
+      - ./conf/:/etc/nginx/
+      - ./html/:/var/www/html/
+      - ./log/:/var/log/nginx/
